@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  if userName
+    h1 Hello, #{userName}!
+    p SESSION ID : #{sessionId}
+    p Expire on after #{maxAge/1000}s
+    a(href="/logout") Logout
+  else
+    a(href="login") 
+      h1 Login
